@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { ShoppingBag, User, Menu } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -38,6 +39,7 @@ export function Navigation() {
 
           {/* User Actions */}
           <div className="flex items-center gap-4">
+            <ThemeToggle />
             <Button variant="ghost" size="sm" asChild>
               <Link href="/cart">
                 <ShoppingBag className="w-4 h-4" />
@@ -77,6 +79,12 @@ export function Navigation() {
               <Link href="/about" className="text-sm hover:text-accent transition-colors">
                 About
               </Link>
+              <div className="pt-2 border-t border-border">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-muted-foreground">Theme</span>
+                  <ThemeToggle />
+                </div>
+              </div>
             </div>
           </div>
         )}

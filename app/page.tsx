@@ -1,32 +1,13 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Navigation } from "@/components/navigation"
 import { ShoppingBag, Store, Shield, Users, TrendingUp, Package } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border bg-card">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-accent rounded-md flex items-center justify-center">
-                <ShoppingBag className="w-5 h-5 text-accent-foreground" />
-              </div>
-              <h1 className="text-xl font-semibold text-foreground">MarketHub</h1>
-            </div>
-            <div className="flex items-center gap-4">
-              <Button variant="ghost" asChild>
-                <Link href="/auth/login">Sign In</Link>
-              </Button>
-              <Button asChild>
-                <Link href="/auth/register">Get Started</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="py-20 px-4">
@@ -198,12 +179,6 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="border-t border-border py-8 px-4">
         <div className="container mx-auto text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="w-6 h-6 bg-accent rounded-md flex items-center justify-center">
-              <ShoppingBag className="w-4 h-4 text-accent-foreground" />
-            </div>
-            <span className="font-semibold">MarketHub</span>
-          </div>
           <p className="text-sm text-muted-foreground">
             © 2024 MarketHub. The complete multi-vendor eCommerce platform.
           </p>
